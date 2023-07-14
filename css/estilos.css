@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#primeraFila {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.2);
+    position: fixed;
+    z-index: 2000;
+    border-bottom: #8ecae6 solid thin;
+}
+#logoMenu {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#logoMenu img{
+    width: 30%;
+    transform: scale(1.5);
+}
+#menu{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#menu a{
+    text-decoration: none;
+}
+#redesMenu {
+    width: 15%;
+}
+#redesMenu a {
+    text-decoration: none;
+}
+
+h1.titulo {
+    font-family: 'Bungee', cursive;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+    color: blue;
+}
+h1.opcionesMenu {
+    font-family: 'Bungee', cursive;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 100;
+    color: black;
+}
+h1.opcionesMenu:hover{
+    color: white;
+}
+.cuerpo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#formulario {
+    width: 100%;
+    background-color: rgba(81, 209, 246, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.txtFormulario {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.txtFormulario h1.unoForm {
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 36px;
+    text-align: center;
+    padding: 1px;
+    margin: 30px 0;
+}
+.txtFormulario h1.dosForm {
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    text-align: center;
+    padding: 1px;
+    margin: 15px 0;
+}
+
+.form {
+    width: 50%;
+    margin: 20px auto;
+    background: rgba(192, 192, 192, .8);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+.tituloForm {
+    width: 100%;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    margin: 10px 0;
+    font-weight: 900;
+}
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 84%;
+}
+.inputForm #dni, #dniSocio {
+    width: 50%;
+}
+.inputForm #dniBuscado {
+    width: 80%;
+}
+
+input {
+    font-size: 1.1em;
+    font-family: 'Source Code Pro', monospace;
+    padding: 0 .6em;
+    margin: 0 .5em;
+}
+.nombreForm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nombreForm .inputForm {
+    width: 40%;
+    margin: 0 1em;
+}
+.datos {
+    width: 50%;
+    text-align: left;
+    margin-top: 1em;
+    height: 40px;
+}
+.txt {
+    width: 100%;
+    height: 4em;
+}
+.botones {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn10 {
+    margin: .5em 2em 1em 2em;
+    padding: 1em;
+    background-color: gray;
+    color: black;
+    width: 10em;
+    border: white solid thin;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+#btn9 {
+    margin: .5em 2em 1em 2em;
+    padding: 1em;
+    background-color: gray;
+    color: black;
+    width: 30em;
+    border: white solid thin;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+.form #btn1 {
+    margin-top: 6em;
+}
+
+
+.footer {
+    width: 100%;
+    height: 80px;
+    max-height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: #8ecae6 solid thin;
+    background-color: rgba(192, 192, 192, 0.2);
+}
+.logofooter {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redesFoot {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.iconoFoot {
+    margin: 10px;
+}
+.derechosAutor {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.derechosAutor h1 {
+    font-size: 16px;
+}
+#formularioAdmin {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.formAdm {
+    width: 100%;
+    margin: 20px auto;
+    background: rgba(192, 192, 192, .8);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+.contenidoForm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.bloqueDerecha{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.bloqueIzquierda{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.nombreFormAdm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nombreFormAdm .inputForm {
+    width: 40%;
+}
+.nombreFormAdm .inputForm #apellidoSocio {
+    margin-left: 2em;
+}
+
+.nombreFormAdm .inputForm #categoriaSocio {
+    margin-left: 2em;
+}
+.alert {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 800;
+    color: red;
+}
