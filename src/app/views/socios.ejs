@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark-subtle">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Biblioteca Poeta Lugones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/socios">Socios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/libros">Libros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/prestamos">Prestamos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/administracion_tablas">Administracion de Tablas</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+            <div>
+              <div class="col">
+                <a href="#agSocios" class="btn btn-info m-4 justify-content-lg-end">AGREGAR SOCIOS</a>
+                    <table class="table  table-striped table-condensed">
+                        <tr class="align-middle text-center">
+
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                            <th class="text-center">FECHA NAC</th>
+                            <th class="text-center">ID GENERO</th>
+                            <th>GENERO</th>
+                            <th>DNI</th>
+                            <th>DIRECCION</th>
+                            <th>LOCALIDAD</th>
+                            <th class="text-xl-center">ID PROVINCIA</th>
+                            <th>PROVINCIA</th>
+                            <th>TELEFONO</th>
+                            <th class="text-xl-center">E-MAIL</th>
+                            <th>FECHA ALTA</th>
+                            <th class="text-xl-center">ID CATEGORIA</th>
+                            <th>CATEGORIA</th>
+                            <th></th>
+                        </tr>
+                        <% for (var i=0; i< socios.length; i++) { %> 
+                            <tr class="align-middle text-center">
+
+                                <td><%=socios[i].id_socios %></td>
+                                <td><%=socios[i].nombre %></td>
+                                <td><%=socios[i].apellido %></td>
+                                <td><%=socios[i].fecha_nac %></td>
+                                <td class="text-center"><%=socios[i].id_genero %></td>
+                                <td><%=socios[i].genero %></td>
+                                <td><%=socios[i].dni %></td>
+                                <td><%=socios[i].direccion %></td>
+                                <td><%=socios[i].localidad %></td>
+                                <td class="text-center"><%=socios[i].id_provincia %></td>
+                                <td><%=socios[i].provincia %></td>
+                                <td><%=socios[i].telefono %></td>
+                                <td><%=socios[i].email %></td>
+                                <td><%=socios[i].fecha_alta %></td>
+                                <td class="text-center"><%=socios[i].id_categoria %></td>
+                                <td><%=socios[i].categoria %></td>
+                                <td class="col">
+                                  <div class="mh-40 p-2">
+                                    <a href="/borrar_socio/<%=socios[i].id_socios %>" class="btn btn-sm btn-outline-warning">BORRAR</a>
+                                  </div>
+                                  <div class="mh-40 p-2">
+                                    <a href="/editar_socio/<%=socios[i].id_socios %>" class="btn btn-sm btn-outline-info">EDITAR</a>
+                                  </div>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </table>
+
+                <div class="row-md-6 card" id="agSocios">
+
+
+                    <form action="/socios" method="post" class="card-body">
+                      <h3 class="card-title">Agregar Socios</h3>
+                     <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control"  name="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="apellido" placeholder="Apellido">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="fecha_nac" placeholder="Fecha de Nacimiento">
+                        </div>
+                        <div class="col">
+                          <input type="number" class="form-control" name="id_genero" placeholder="Id Genero">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="dni" placeholder="D.N.I.">
+                        </div>
+                      </div>
+                      <div class="row my-3">
+                        <div class="col">
+                          <input type="text" class="form-control"  name="direccion" placeholder="Direccion">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="localidad" placeholder="Localidad">
+                        </div>
+                        <div class="col">
+                          <input type="number" class="form-control" name="id_provincia" placeholder="Id Provincia">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                      <div class="row my-3">
+                        <div class="col">
+                          <input type="text" class="form-control"  name="fecha_alta" placeholder="Fecha de Alta">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="id_categoria" placeholder="Id Categoria de Socio">
+                        </div>
+                      </div>
+                      <input type="submit" class="btn btn-primary my-4" value="Guardar">
+                    </form>
+                </div>
+              </div>
+            </div>
+
+
+
+</body>
+</html>
